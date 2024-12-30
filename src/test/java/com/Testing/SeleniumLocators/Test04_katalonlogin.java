@@ -15,21 +15,20 @@ public class Test04_katalonlogin {
     @Test
     public void test_login() throws Exception {
 
-//        https://katalon-demo-cura.herokuapp.com/
-//
-//        Click on Make Appointment button
-//
-//        Enter the Login creds and submit click
-//
-//        Verify the current URL == https://katalon-demo-cura.herokuapp.com/#appointment
+//   Navigate to    https://katalon-demo-cura.herokuapp.com/
+
         EdgeOptions edgeOptions = new EdgeOptions();
         // edgeOptions.addArguments("--start-maximized");
 
         WebDriver driver = new EdgeDriver(edgeOptions);
         driver.get("https://katalon-demo-cura.herokuapp.com/");
 
+//        Click on Make Appointment button
+
         WebElement makeapp = driver.findElement(By.id("btn-make-appointment"));
         makeapp.click();
+
+//        Enter the Login creds and submit click
 
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("John Doe");
@@ -40,6 +39,7 @@ public class Test04_katalonlogin {
         WebElement button = driver.findElement(By.id("btn-login"));
         button.click();
 
+//        Verify the current URL == https://katalon-demo-cura.herokuapp.com/#appointment
         System.out.println(driver.getCurrentUrl());
        // Assert.assertEquals(driver.getCurrentUrl(),"https://katalon-demo-cura.herokuapp.com/#appointment");
         //Or
