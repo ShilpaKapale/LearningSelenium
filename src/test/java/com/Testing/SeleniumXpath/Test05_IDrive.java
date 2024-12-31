@@ -12,7 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Test05_IDrive {
-    @Description("Verify error message in IDrive360")
+    @Description("Verify expire message in IDrive360")
     @Test
     public void test_login() throws Exception {
 
