@@ -9,6 +9,8 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class Test04_katalonlogin {
 
     @Description("Verify Katalon")
@@ -30,11 +32,16 @@ public class Test04_katalonlogin {
 
 //        Enter the Login creds and submit click
 
-        WebElement username = driver.findElement(By.name("username"));
-        username.sendKeys("John Doe");
+//        WebElement username = driver.findElement(By.name("username"));
+//        username.sendKeys("John Doe");
+//
+//        WebElement password = driver.findElement(By.id("txt-password"));
+//        password.sendKeys("ThisIsNotAPassword");
+        List<WebElement>  username = driver.findElements(By.xpath("//input[@placeholder='Username']"));
+        username.get(1).sendKeys("John Doe");
 
-        WebElement password = driver.findElement(By.id("txt-password"));
-        password.sendKeys("ThisIsNotAPassword");
+        List<WebElement> password = driver.findElements(By.xpath("//input[@placeholder='Password']"));
+        password.get(1).sendKeys("ThisIsNotAPassword");
 
         WebElement button = driver.findElement(By.id("btn-login"));
         button.click();
