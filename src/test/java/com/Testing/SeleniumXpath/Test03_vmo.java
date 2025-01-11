@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.Test;
 
-public class Test07_vmo {
+public class Test03_vmo {
     @Description("Verify that with invalid email, pass, error message is shown on the app.vwo.com")
     @Test
     public void test_vwo_login() throws Exception {

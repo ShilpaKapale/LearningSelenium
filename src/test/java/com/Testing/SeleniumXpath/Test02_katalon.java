@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.Test;
 
-public class Test06_katalon {
+public class Test02_katalon {
     @Description("Verify Katalon")
     @Test
     public void test_login() throws Exception {
